@@ -26,7 +26,7 @@
   <main class="page-content">
     <form class="sort-form" action="echo.htmlacademy.ru" method="get">
       <fieldset>
-        <legend>СТОИМОСТЬ:</legend>
+        <legend>стоимость:</legend>
         <div oninput="costoutput.value=costcount.value">
           <div class="half-width">
             <label for="costcount"></label>
@@ -35,39 +35,40 @@
           <div class="half-width output-area">
             <output name="costoutput"></output>
           </div>
-          <p>ОТ 0 ДО 15000</p>
+          <p>от 0 до 15000</p>
         </div>
       </fieldset>
 
       <fieldset>
-        <legend>CETKA:</legend>
+        <legend>сетка:</legend>
         <input type="radio" id="radio1" name="radio" value="adaptive" checked>
         <label for="radio1">Адаптивная</label>
         <input type="radio" id="radio2" name="radio" value="fixed">
         <label for="radio3">Резиновая</label>
-        <input type="radio" id="radio3" name="radio" value="rubber">
+        <input type="radio" id="radio3" name="radio" value="rubber" disabled>
         <label for="radio2">Фиксированная</label>
       </fieldset>
-      <h2>ОСОБЕННОСТИ:</h2>
-      <ul class="features">
-        <li><input type="checkbox" id="check1" name="checkbox" value="slider" checked>Слайдер</li>
-        <li><input type="checkbox" id="check2" name="checkbox" value="advantages">Блок преимуществ</li>
-        <li><input type="checkbox" id="check3" name="checkbox" value="news" checked>Новости</li>
-        <li><input type="checkbox" id="check4" name="checkbox" value="galery">Галерея</li>
-        <li><input type="checkbox" id="check5" name="checkbox" value="cart">Корзина</li>
-      </ul>
-      <label for="check1"></label>
-      <label for="check2"></label>
-      <label for="check3"></label>
-      <label for="check4"></label>
-      <label for="check5"></label>
+
+      <fieldset>
+        <legend>особенности:</legend>
+          <input type="checkbox" id="check1" name="checkbox" value="slider" checked>
+          <label for="check1">Слайдер</label>
+          <input type="checkbox" id="check2" name="checkbox" value="advantages">
+          <label for="check2">Блок преимуществ</label>
+          <input type="checkbox" id="check3" name="checkbox" value="news" checked>
+          <label for="check3">Новости</label>
+          <input type="checkbox" id="check4" name="checkbox" value="galery">
+          <label for="check4">Галерея</label>
+          <input type="checkbox" id="check5" name="checkbox" value="cart">
+          <label for="check5">Корзина</label>
+      </fieldset>
       <input type="submit" name="submit" value="Показать"></input>
     </form>
     <div class="sort">
-      <b>СОРТИРОВАТЬ:</b>
-      <span>ПО ЦЕНЕ</span>
-      <span>ПО ТИПУ</span>
-      <span>ПО НАЗВАНИЮ</span>
+      <b>сортировать:</b>
+      <span>по цене</span>
+      <span>по типу</span>
+      <span>по названию</span>
       <a href="#" class="arrow up"></a>
       <a href="#" class="arrow down"></a>
     </div>
@@ -75,66 +76,36 @@
       <div class="catalog-item">
         <img src="img/img-sedona.jpg" alt="Sedona" width="360" height="576">
         <div class="catalog-content">
-
+          <b>sedona</b>
+          <p>Информационный сайт для туристов</p>
+          <a href="#">9 900 РУБ.</a>
         </div>
       </div>
       <div class="catalog-item">
         <img src="img/img-pink.jpg" alt="Pink" width="360" height="576">
       </div>
-      <div class="slider-3">
-        <input type="radio" id="btn-7" name="toggle" value="">
-        <input type="radio" id="btn-8" name="toggle" value="">
-        <input type="radio" id="btn-9" name="toggle" value="">
-        <div class="slider-controls">
-          <label for="btn-7"></label>
-          <label for="btn-8"></label>
-          <label for="btn-9"></label>
-        </div>
+      <div class="catalog-item">
         <img src="img/img-barbershop.jpg" alt="Barbershop" width="360" height="576">
       </div>
-      <div class="slider-4">
-        <input type="radio" id="btn-10" name="toggle" value="">
-        <input type="radio" id="btn-11" name="toggle" value="">
-        <input type="radio" id="btn-12" name="toggle" value="">
-        <div class="slider-controls">
-          <label for="btn-10"></label>
-          <label for="btn-11"></label>
-          <label for="btn-12"></label>
-        </div>
+      <div class="catalog-item">
         <img src="img/img-mishka.jpg" alt="Mishka" width="360" height="576">
       </div>
-      <div class="slider-5">
-        <input type="radio" id="btn-13" name="toggle" value="">
-        <input type="radio" id="btn-14" name="toggle" value="">
-        <input type="radio" id="btn-15" name="toggle" value="">
-        <div class="slider-controls">
-          <label for="btn-13"></label>
-          <label for="btn-14"></label>
-          <label for="btn-15"></label>
-        </div>
+      <div class="catalog-item">
         <img src="img/img-aplus.jpg" alt="Aplus" width="360" height="576">
       </div>
-      <div class="slider-6">
-        <input type="radio" id="btn-16" name="toggle" value="">
-        <input type="radio" id="btn-17" name="toggle" value="">
-        <input type="radio" id="btn-18" name="toggle" value="">
-        <div class="slider-controls">
-          <label for="btn-16"></label>
-          <label for="btn-17"></label>
-          <label for="btn-18"></label>
-        </div>
+      <div class="catalog-item">
         <img src="img/img-kvast.jpg" alt="Kvast" width="360" height="576">
       </div>
       <div class="pagination">
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>СЛЕДУЮЩАЯ</span>
+        <a href="" class="active">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="" class="next">следующая</a>
       </div>
     </div>
     <div class="contacts">
       <div class="contacts-info">
-        <h3>NЁRDS DESIGN STUDIO</h3>
+        <h3>nёrds design studio</h3>
         <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 198</p>
         <p>тел. +7 (812) 275-75-75</p>
         <a href="#">Напишите нам</a>
@@ -144,9 +115,9 @@
   </main>
   <footer class="page-footer">
     <div class="social">
-      <a href="#" class="social-btn social-btn-vk">VK</a>
-      <a href="#" class="social-btn social-btn-fb">FB</a>
-      <a href="#" class="social-btn social-btn-in">IN</a>
+      <a href="#" class="social-btn social-btn-vk">vk</a>
+      <a href="#" class="social-btn social-btn-fb">fb</a>
+      <a href="#" class="social-btn social-btn-in">in</a>
     </div>
     <div class="friends">
       <b>Давайте дружить, это выгодно!</b>
