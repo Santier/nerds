@@ -114,15 +114,36 @@
             <a href="#" class="btn btn-red btn-footer">Напишите нам</a>
           </div>
           <div class="map-marker"></div>
+          <section class="write-us">
+            <header class="form-header">
+              <h2>Напишите нам</h2>
+              <div class="close">&times</div>
+            </header>
+            <form class="write-form" action="echo.htmlacademy.ru" method="post">
+              <p>
+                <label for="name">Ваше имя:</label>
+                <input type="text" name="name" id="name" value="" placeholder="Представьтесь, пожалуйста" pattern="^[А-Яа-яЁё\s]+$">
+              </p>
+              <p>
+                <label for="mail">Ваш e-mail:</label>
+                <input type="email" name="mail" id="mail" value="" placeholder="Для отправки ответа">
+              </p>
+              <p>
+                <label for="letter">Текст письма:</label>
+                <textarea placeholder="В свободной форме" name="letter" id="letter"></textarea>
+              </p>
+              <button type="submit" class="btn btn-red btn-form">Отправить</button>
+            </form>
+          </section>
         </div>
       </div>
   </main>
   <footer class="page-footer">
     <div class="container wrapper">
     <div class="social">
-      <a href="#" class="social-btn social-btn-vk"></a>
-      <a href="#" class="social-btn social-btn-fb"></a>
-      <a href="#" class="social-btn social-btn-in"></a>
+      <a href="#" class="social-btn social-btn-vk btn-red"></a>
+      <a href="#" class="social-btn social-btn-fb btn-red"></a>
+      <a href="#" class="social-btn social-btn-in btn-red"></a>
     </div>
     <div class="friends">
       <b>Давайте дружить, это выгодно!</b>
