@@ -13,7 +13,7 @@
     <div class="wrapper container">
       <div class="logo">
         <a href="/">
-          <img src="img/nerds-logo.png" alt="Логотип" width="160" height="65">
+          <a href="/"><img src="img/nerds-logo.png" alt="Логотип" width="160" height="65"></a>
         </a>
       </div>
       <nav class="main-menu">
@@ -28,33 +28,29 @@
     <h1>Магазин готовых шаблонов</h1>
   </header>
   <main class="page-content">
-    <form class="sort-form" action="echo.htmlacademy.ru" method="get">
-      <fieldset>
-        <legend>стоимость:</legend>
-        <div oninput="costoutput.value=costcount.value">
+    <div class="container wrapper-shop">
+    <form class="sort-form" action="echo.htmlacademy.ru" method="get" oninput="costoutput.value=costcount.value">
           <div class="half-width">
-            <label for="costcount"></label>
-            <input type="range" id="costcount" name="costcount" min="1" max="15000" step="1">
+            <label for="costcount">стоимость:</label>
+            <input type="range" id="costcount" name="costcount" min="0" max="15000" step="1" value="1" multiple>
+            <div class="range-item"></div>
           </div>
           <div class="half-width output-area">
-            <output name="costoutput"></output>
+            <span>от</span><output class="first-number" name="costoutput">0</output><span>до</span><output class="second-number" name="result">15000</output>
           </div>
-          <p>от 0 до 15000</p>
-        </div>
-      </fieldset>
 
-      <fieldset>
-        <legend>сетка:</legend>
+      <div class="net">
+        <label>сетка:</label>
         <input type="radio" id="radio1" name="radio" value="adaptive" checked>
         <label for="radio1">Адаптивная</label>
         <input type="radio" id="radio2" name="radio" value="fixed">
         <label for="radio3">Резиновая</label>
         <input type="radio" id="radio3" name="radio" value="rubber" disabled>
         <label for="radio2">Фиксированная</label>
-      </fieldset>
+      </div>
 
-      <fieldset>
-        <legend>особенности:</legend>
+      <div class="features">
+        <label>особенности:</label>
           <input type="checkbox" id="check1" name="checkbox" value="slider" checked>
           <label for="check1">Слайдер</label>
           <input type="checkbox" id="check2" name="checkbox" value="advantages">
@@ -65,7 +61,7 @@
           <label for="check4">Галерея</label>
           <input type="checkbox" id="check5" name="checkbox" value="cart">
           <label for="check5">Корзина</label>
-      </fieldset>
+      </div>
       <input type="submit" name="submit" value="Показать"></input>
     </form>
     <div class="sort">
@@ -107,25 +103,51 @@
         <a href="" class="next">следующая</a>
       </div>
     </div>
+    </div>
     <div class="contacts">
-      <div class="contacts-info">
-        <h3>nёrds design studio</h3>
-        <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 198</p>
-        <p>тел. +7 (812) 275-75-75</p>
-        <a href="#">Напишите нам</a>
+      <div class="container">
+        <div class="contacts-info">
+          <h3>nёrds design studio</h3>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <a href="tel:+7812275-75-75" class="phone">тел. +7 (812) 275-75-75</a>
+          <a href="#" class="btn btn-red btn-footer">Напишите нам</a>
+        </div>
+        <div class="map-marker"></div>
+        <!-- <section class="write-us">
+          <header class="form-header">
+            <h2>Напишите нам</h2>
+            <div class="close">&times</div>
+          </header>
+          <form class="write-form" action="echo.htmlacademy.ru" method="post">
+            <p>
+              <label for="name">Ваше имя:</label>
+              <input type="text" name="name" id="name" value="" placeholder="Представьтесь, пожалуйста" pattern="^[А-Яа-яЁё\s]+$">
+            </p>
+            <p>
+              <label for="mail">Ваш e-mail:</label>
+              <input type="email" name="mail" id="mail" value="" placeholder="Для отправки ответа">
+            </p>
+            <p>
+              <label for="letter">Текст письма:</label>
+              <textarea placeholder="В свободной форме" name="letter" id="letter"></textarea>
+            </p>
+            <button type="submit" class="btn btn-red btn-form">Отправить</button>
+          </form>
+        </section> -->
       </div>
-      <img src="img/map-marker.jpg" alt="Маркер" width="231" height="190">
     </div>
   </main>
   <footer class="page-footer">
+    <div class="container wrapper">
     <div class="social">
-      <a href="#" class="social-btn social-btn-vk">vk</a>
-      <a href="#" class="social-btn social-btn-fb">fb</a>
-      <a href="#" class="social-btn social-btn-in">in</a>
+      <a href="#" class="social-btn social-btn-vk btn-red"></a>
+      <a href="#" class="social-btn social-btn-fb btn-red"></a>
+      <a href="#" class="social-btn social-btn-in btn-red"></a>
     </div>
     <div class="friends">
       <b>Давайте дружить, это выгодно!</b>
       <p>Скидка 10% для друзей из социальных сетей.</p>
+    </div>
     </div>
   </footer>
 </body>
