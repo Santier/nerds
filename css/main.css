@@ -7,6 +7,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
@@ -19,7 +20,20 @@ h1, h2, h3, p, ul, li {
 a {
   text-decoration: none;
 }
-
+.hidden {
+  display: none;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 9;
+}
 .main-menu a {
   color: #000000;
   text-transform: uppercase;
@@ -195,6 +209,7 @@ a {
   width: 160px;
   text-transform: uppercase;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .btn-red {
@@ -269,6 +284,7 @@ a {
 
 .btn-footer {
   width: 219px;
+  border: none;
 }
 
 .btn-shop {
@@ -577,9 +593,10 @@ input[type="submit"] {
   margin-left: 47px;
 }
 
-.sort-menu a:nth-child(3)  {
+.sort-menu a:nth-child(3) {
   margin: 0 27px;
 }
+
 
 /*styles for catalog*/
 
@@ -610,20 +627,22 @@ input[type="submit"] {
   box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
 }
 
-.catalog-item:hover::after{
-  background-color: rgba(77,77,77,1);
+.catalog-item:hover::after {
+  background-color: rgba(77, 77, 77, 1);
   transition: all .6s ease;
 }
-.catalog-item::after{
+
+.catalog-item::after {
   position: absolute;
   content: '';
   display: block;
   height: 40px;
   width: 100%;
   top: 0;
-  background-color: rgba(77,77,77,.12);
+  background-color: rgba(77, 77, 77, .12);
   border-radius: 3px 3px 0 0;
 }
+
 .catalog-item::before {
   content: "";
   position: absolute;
@@ -636,6 +655,7 @@ input[type="submit"] {
   left: 16px;
   z-index: 3;
 }
+
 .catalog-item:hover .catalog-item-content {
   transform: translateY(0);
   opacity: 1;
@@ -668,6 +688,7 @@ input[type="submit"] {
   line-height: 18px;
   padding: 16px 0 29px;
 }
+
 
 /*style for paginator*/
 
@@ -933,10 +954,12 @@ input[type="submit"] {
   height: 100%;
   border: 0;
 }
-.contacts .container{
+
+.contacts .container {
   height: inherit;
   padding-top: 56px;
 }
+
 .contacts-info {
   position: relative;
   width: 319px;
@@ -974,7 +997,6 @@ input[type="submit"] {
 }
 
 .write-us {
-  display: none;
   position: fixed;
   top: 15%;
   left: calc(50% - 480px);
@@ -983,18 +1005,22 @@ input[type="submit"] {
   padding: 73px 100px 84px;
   box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
   background-color: #ffffff;
+  z-index: 10;
 }
 
 .form-header {
   position: relative;
 }
 
-.close {
+button.close {
   position: absolute;
   right: 0;
   top: 0;
-  font-size: 50px;
-  color: #fb565a;
+  width: 21px;
+  height: 21px;
+  background-color: #fff;
+  background-image: url("../img/close-cross.svg");
+  background-repeat: no-repeat;
   opacity: 0.3;
   cursor: pointer;
 }
@@ -1053,17 +1079,22 @@ input[type="submit"] {
   border: 2px solid #d7dcde;
 }
 
-#name:hover {
+#name:hover,
+#mail:hover,
+#letter:hover {
   border: 2px solid #b4b9bb;
 }
 
-#name:focus {
+#name:focus,
+#mail:focus,
+#letter:focus {
   outline: none;
   border: 2px solid black;
   color: #444;
 }
 
-#name:invalid {
+#name:invalid,
+#mail:invalid {
   border: 2px solid #e74246;
   color: #e74246;
 }
